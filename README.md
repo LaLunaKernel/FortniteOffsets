@@ -10,7 +10,7 @@ Latest Patch: ``v31.41``
 
 [Latest Offsets](https://github.com/LaLunaKernel/FortniteOffsets/blob/main/offsets.hpp)
 
-[Latest Cr3 Fix](https://github.com/LaLunaKernel/FortniteOffsets/blob/main/cr3.cp)
+[Latest Cr3 Fix](https://github.com/LaLunaKernel/FortniteOffsets/blob/main/cr3.cpp)
 
 [Latest GetBoneWithRotation](https://github.com/LaLunaKernel/FortniteOffsets/blob/main/GetBoneWithRotation.h)
 
