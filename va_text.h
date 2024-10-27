@@ -1,8 +1,5 @@
-for (auto i = 0; i < INT_MAX; i++) {
-    va_text = BaseAddress + i * 0x1000;
-    auto uworld = read<uintptr_t>(va_text + Offsets::UWorld);
-    auto level = read<uintptr_t>(uworld + Offsets::PersistentLevel);
-    if (uworld && level && read<uintptr_t>(level + Offsets::OwningWorld) == uworld) {
-        break;
+for (auto i = 0; i < 255; i++) {
+    if (NA::Read<__int32>(virtualaddy + (i * 0x1000)) == 0x905A4D) {
+        va_text = virtualaddy + ((i + 1) * 0x1000);
     }
 }
