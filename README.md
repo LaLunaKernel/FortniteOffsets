@@ -4,7 +4,7 @@
 
 Offsets will always be updated every update ready for you guys to use!
 
-Latest Patch: ``v31.20``
+Latest Patch: ``v31.41``
 
 # Content
 
@@ -20,4 +20,4 @@ Latest Patch: ``v31.20``
 
 # Info
 
-[Discord](https://discord.gg/KveH4XxYXG) - Noyso my discord!
+[Discord](https://discord.gg/nayso) - Nayso my discord!
