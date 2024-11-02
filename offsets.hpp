@@ -1,11 +1,11 @@
 namespace Offsets
 {
-	uintptr_t UWorld = 0x1221B738,
+	uintptr_t UWorld = 0x12DA3A98,
         uintptr_t PersistentLevel = 0x30,
         uintptr_t OwningWorld = 0xc0,
   	uintptr_t HabaneroComponent = 0x9E8,
-	uintptr_t GObjects = 0x121F3380,  
-	uintptr_t GNames = 0x123FAFC0,
+	uintptr_t GObjects = 0x12E4DF88,  
+	uintptr_t GNames = 0x12F88800,
 	uintptr_t FName = 0x117284C0,
 	uintptr_t StaticFindObject = 0x1DE185C,
    	uintptr_t GetBoneMatrix = 0x1E4E8E6,
