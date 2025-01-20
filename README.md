@@ -16,8 +16,8 @@ Latest Patch: ``v31.41``
 
 [Latest Camera](https://github.com/LaLunaKernel/FortniteOffsets/blob/main/camera.h)
 
-[Latest Va Text](https://github.com/LaLunaKernel/FortniteOffsets/blob/main/va_text.h) Credit to [Stern](https://github.com/SternI)
+[Latest FName](https://github.com/LaLunaKernel/FortniteOffsets/blob/main/FName.h) Credit to [Stern](https://github.com/SternI)
 
 # Info
 
-[Discord](https://discord.gg/nayso) - Nayso my discord!
+[Discord](https://discord.gg/xBeTUX23Qd) - Clover my discord!
