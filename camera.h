@@ -1,30 +1,16 @@
-namespace camera
+Camera get_view_point()
 {
-	FVector location, rotation;
-	float fov;
+	//YOU MIGHT NEED TO UPDATE THE LOCATION AND ROTATION POINTER IN THE NEXT UPDATE SO CHECK IT OUT DONT FORGET!
+	Camera view_point{};
+	uintptr_t location_pointer = read<uintptr_t>(cache::uworld + 0x128); //
+	uintptr_t rotation_pointer = read<uintptr_t>(cache::uworld + 0x138); //
+	FNRot fnrot{};
+	fnrot.a = read<double>(rotation_pointer);
+	fnrot.b = read<double>(rotation_pointer + 0x20);
+	fnrot.c = read<double>(rotation_pointer + 0x1D0);
+	view_point.location = read<Vector3>(location_pointer);
+	view_point.rotation.x = asin(fnrot.c) * (180.0 / M_PI);
+	view_point.rotation.y = ((atan2(fnrot.a * -1, fnrot.b) * (180.0 / M_PI)) * -1) * -1;
+	view_point.fov = read<float>(cache::player_controller + 0x3AC) * 90.0f;
+	return view_point;
 }
-
-	static auto UpdateCamera() -> void
-	{
-		auto location_pointer = reader<uintptr_t>(pointer->uworld + 0x110);
-		auto rotation_pointer = reader<uintptr_t>(pointer->uworld + 0x120);
-
-		struct FNRotation
-		{
-			double a; //0x0000
-			char pad_0008[24]; //0x0008
-			double b; //0x0020
-			char pad_0028[424]; //0x0028
-			double c; //0x01D0
-    }tpmrotation;
-
-		tpmrotation.a = reader<double>(rotation_pointer);
-		tpmrotation.b = reader<double>(rotation_pointer + 0x20);
-		tpmrotation.c = reader<double>(rotation_pointer + 0x1D0);
-
-    camera::rotation.x = asin(tpmrotation.c) * (180.0 / M_PI);
-		camera::rotation.y = ((atan2(tpmrotation.a * -1, tpmrotation.b) * (180.0 / M_PI)) * -1) * -1;
-		camera::rotation.z = 0;
-		camera::location = reader<FVector>(location_pointer);
-		camera::fov = reader<float>(pointer->player_controller + 0x394) * 90.f;
-  }
