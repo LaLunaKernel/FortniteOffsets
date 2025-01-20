@@ -1,76 +1,22 @@
-namespace Offsets
-{
-	uintptr_t UWorld = 0x12DA3A98,
-        uintptr_t PersistentLevel = 0x30,
-        uintptr_t OwningWorld = 0xc0,
-  	uintptr_t HabaneroComponent = 0x9E8,
-	uintptr_t GObjects = 0x12E4DF88,  
-	uintptr_t GNames = 0x12F88800,
-	uintptr_t FName = 0x117284C0,
-	uintptr_t StaticFindObject = 0x1DE185C,
-   	uintptr_t GetBoneMatrix = 0x1E4E8E6,
- 	uintptr_t LineOfSightTo = 0x627FB84,
-        uintptr_t ProjectileSpeed = 0x1CC4,
-        uintptr_t ProjectileGravity = 0x1F34,
-        uintptr_t PlayerName = 0xAA8,
-	uintptr_t Viewpoint = 0x10F90A10,
-	uintptr_t DrawTransition = 0x71,
-	uintptr_t ProcessEvent = 0x4D,
-	uintptr_t Fire = 0x285D0DC,
-	uintptr_t Malloc = 0xC4663D,
-        uintptr_t platform = 0x3F0,
-	uintptr_t Free = 0xC4668D,
-	uintptr_t LocalPawn = 0x338,
-	uintptr_t PlayerController = 0x30,
-	uintptr_t LocalPlayers = 0x38,
-	uintptr_t PlayerState = 0x2B0,
-	uintptr_t GameState = 0x160,
-	uintptr_t GameInstance = 0x1D8,
-	uintptr_t PlayerArray = 0x2A8,
-	uintptr_t TeamIndex = 0x1211,
-	uintptr_t RootC = 0x198,
-	uintptr_t CameraManager = 0x348,
-	uintptr_t CachedActor = 0x308,
-	uintptr_t RootComponent = 0x198,
-	uintptr_t ActorCount = 0xA8,
-	uintptr_t TeamIndex = 0x1201, 
-	uintptr_t BoneArray = 0x570, 
-	uintptr_t BoneCache = 0x5B8,
-	uintptr_t C2W = 0x1c0,
-	uintptr_t Actor = 0xA0, 
-	uintptr_t ActorMesh = 0x310,
-	uintptr_t CurrentActor(AActor) = 0xA8,
-	uintptr_t PersistentLevel = 0x30,
-	uintptr_t WeaponData = 0x520,
-        uintptr_t AmmoCount = 0xef4,
-        uintptr_t bIsTargeting = 0x581,
-        uintptr_t GunName = 0x98,
-        uintptr_t Tier = 0x9A,
-	uintptr_t RelativeLocation = 0x120,
-	uintptr_t DisplayName = 0x90,
-        uintptr_t LastRenderTimeOnScreen = 0x2E0, 
-        uintptr_t LastSubmitTime = 0x2E8, 
-        uintptr_t Velocity = 0x168,
-        uintptr_t DefaultFOV = 0x2a4,
-        uintptr_t CurrentWeapons = 0x9d8,
-        uintptr_t bIsReloadingWeapon = 0x399,
-        uintptr_t bIsEquippingWeapon = 0x350, 
-	uintptr_t bIsChargingWeapon = 0x369,
-        uintptr_t bIsCrouched = 0x45C,
-	uintptr_t bIsDying = 0x758,
-	uintptr_t bIsHiddenForDeath = 0x758,
-	uintptr_t bIsKnockedback = 0x758,
-	uintptr_t bIsStaggered = 0x759, 
-        uintptr_t bIsInvulnerable = 0x75A,
-	uintptr_t bSpotted = 0x75A,
-	uintptr_t bIsSliding = 0x75B,
-	uintptr_t bWeaponHolstered = 0x939,
-	uintptr_t bIsDBNO = 0x93A,
-	uintptr_t LastRevivedFromDBNOTime = 0x4C30,
-	uintptr_t bIsJumping = 0xA60,
-        uintptr_t bIsABot = 0x29A,
-	uintptr_t bIsReloadingWeapon = 0x388,
-	uintptr_t GlobalAnimRateScale = 0xA18,
-	uintptr_t ComponetToWorld = 0x1c0,
-	uintptr_t PawnPrivate = 0x308,
-}
+#define UWORLD 0x1683A738
+#define GAME_INSTANCE 0x1F8
+#define LOCAL_PLAYERS 0x38
+#define PLAYER_CONTROLLER 0x30
+#define LOCAL_PAWN 0x350
+#define PAWN_PRIVATE 0x320
+#define ROOT_COMPONENT 0x1B0
+#define RELATIVE_LOCATION 0x138
+#define PLAYER_STATE 0x2C8
+#define TEAM_INDEX 0x1261
+#define GAME_STATE 0x180
+#define PLAYER_ARRAY 0x2C0
+#define MESH 0x328
+#define COMPONENT_TO_WORLD 0x1E0
+#define BONE_ARRAY 0x5A8
+#define BONE_ARRAY_CACHE 0x5B8
+#define LAST_SUBMIT_TIME 0x2E8
+#define LAST_SUBMIT_TIME_ON_SCREEN 0x2F0
+#define VELOCITY 0x180
+#define CURRENT_WEAPON 0xa80
+#define WEAPON_DATA 0x6a0
+#define DISPLAY_NAME 0x40
