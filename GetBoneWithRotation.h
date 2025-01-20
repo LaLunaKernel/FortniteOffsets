@@ -1,17 +1,10 @@
-ftransform GetBoneIndex(uint64_t mesh, int index)
-{
-	uint64_t bonearray = reader<uint64_t>(mesh + 0x4a8);
-	if (!bonearray) bonearray = reader<uint64_t>(mesh + 0x4a8 + 0x10);
-	return read<ftransform>(bonearray + (index * 0x30));
-}
+static auto getsocketlocation(uintptr_t skeletal_mesh, int bone_index) -> fvector {
+		uintptr_t bone_array = read<uintptr_t>(skeletal_mesh + offsets::BoneArray);
+		if (bone_array == NULL) bone_array = read<uintptr_t>(skeletal_mesh + offsets::BoneArray + 0x10);
 
-Vector3 GetBoneWithRotation(DWORD_PTR mesh, int id)
-{
-	ftransform bone = GetBoneIndex(mesh, id);
-	ftransform ComponentToWorld = reader<ftransform>(mesh + offsets::componet_to_world);
+		FTransform bone = io->read<FTransform>(bone_array + (bone_index * 0x60));
+		FTransform component_to_world = io->read<FTransform>(skeletal_mesh + offsets::ComponentToWorld);
+		D3DMATRIX matrix = matrix_multiplication(bone.to_matrix_with_scale(), component_to_world.to_matrix_with_scale());
 
-	D3DMATRIX Matrix;
-	Matrix = MatrixMultiplication(bone.ToMatrixWithScale(), ComponentToWorld.ToMatrixWithScale());
-
-	return Vector3(Matrix._41, Matrix._42, Matrix._43);
-}
+		return fvector(matrix._41, matrix._42, matrix._43);
+	}
